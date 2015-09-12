@@ -22,6 +22,7 @@ namespace CaliburnMicroW10
             _container = new WinRTContainer();
             _container.RegisterWinRTServices();
             _container.PerRequest<MainPageViewModel>();
+            _container.PerRequest<SecondPageViewModel>();
         }
 
         protected override void OnLaunched(LaunchActivatedEventArgs e)
