@@ -3,14 +3,12 @@ using Caliburn.Micro;
 
 namespace CaliburnMicroW10.ViewModels
 {
-    public class MainPageViewModel : Screen
+    public class MainPageViewModel : ViewModelBase
     {
-        private readonly INavigationService _navigationService;
         private string _name = String.Empty;
 
-        public MainPageViewModel(INavigationService navigationService)
+        public MainPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            _navigationService = navigationService;
         }
 
         public string Title
@@ -35,7 +33,7 @@ namespace CaliburnMicroW10.ViewModels
 
         public void Navigate()
         {
-            _navigationService.NavigateToViewModel<SecondPageViewModel>();
+            NavigationService.NavigateToViewModel<SecondPageViewModel>();
         }
     }
 }

@@ -4,9 +4,13 @@ using Caliburn.Micro;
 
 namespace CaliburnMicroW10.ViewModels
 {
-    public class SecondPageViewModel : Screen
+    public class SecondPageViewModel : ViewModelBase
     {
         private string _selectedItem;
+
+        public SecondPageViewModel(INavigationService navigationService) : base(navigationService)
+        {
+        }
 
         public ObservableCollection<string> Items
         {
